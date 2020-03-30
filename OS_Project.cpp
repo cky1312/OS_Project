@@ -5,12 +5,7 @@ using namespace std;
 void details();
 void check(int , int , int);
 
-int calIngredients(int process,int need)
-{
-	int req_Ingredients = 0;
-	req_Ingredients = process * (need - 1) + 1;
-	return req_Ingredients;
-}
+
 
 int noOfChef, neededIngredient,ingredientLimit,LimitOfChef,reqIngredients;
 
@@ -23,6 +18,12 @@ void details()
 	cin>>neededIngredient;
 	cout<<"\n";
 	check(noOfChef,neededIngredient,reqIngredients);
+}
+int calIngredients(int process,int need)
+{
+	int req_Ingredients = 0;
+	req_Ingredients = process * (need - 1) + 1;
+	return req_Ingredients;
 }
 
 void check(int a,int b,int c)
