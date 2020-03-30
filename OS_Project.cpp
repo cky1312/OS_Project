@@ -36,7 +36,7 @@ void check(int a,int b,int c)
 	
 	if(b > ingredientLimit)
 	{
-		cout<<"Overflow, The kitchen cannot have this much ingredients,\n";
+		cout<<"Overflow, The kitchen cannot have this much ingredients.\n";
 		details();
 	}
 	
