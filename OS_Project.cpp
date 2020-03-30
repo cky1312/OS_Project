@@ -5,6 +5,12 @@ using namespace std;
 void details();
 void check(int , int , int);
 
+int calIngredients(int process,int need)
+{
+	int req_Ingredients = 0;
+	req_Ingredients = process * (need - 1) + 1;
+	return req_Ingredients;
+}
 
 
 int noOfChef, neededIngredient,ingredientLimit,LimitOfChef,reqIngredients;
@@ -19,12 +25,6 @@ void details()
 	cout<<"\n";
 	check(noOfChef,neededIngredient,reqIngredients);
 }
-int calIngredients(int process,int need)
-{
-	int req_Ingredients = 0;
-	req_Ingredients = process * (need - 1) + 1;
-	return req_Ingredients;
-}
 
 void check(int a,int b,int c)
 {
@@ -36,7 +36,7 @@ void check(int a,int b,int c)
 	
 	if(b > ingredientLimit)
 	{
-		cout<<"Overflow, The kitchen can't have this much ingredients,\n";
+		cout<<"Overflow, The kitchen cannot have this much ingredients,\n";
 		details();
 	}
 	
